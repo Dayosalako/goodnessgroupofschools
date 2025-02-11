@@ -251,8 +251,8 @@ section {
 }
 
 /* Event Card Header */
-.event-card h3 {                                                                                
-     font-size: 22px;
+.event-card h3 {
+    font-size: 22px;
     color: #2c5e1a;
     margin-bottom: 12px;
     font-weight: 600;
@@ -273,54 +273,6 @@ section {
     border-radius: 10px;
     margin-bottom: 15px;
 }
-/* event scroll */
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-
-    /* event Slide */                    
-  .event-slide {                    
-      display: none;
-    padding: 20px;
-    font-size: 1.2rem;
-    max-width: 90%;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-.event-card h3 {                    
-      margin-top: 10px;
-    font-weight: bold;
-    color: #004d00;
-}
-
-/* new  Navigation Buttons */                    
-  .prev-btn, .next-btn {                                                                                                    
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #004d00;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    border-radius: 50%;
-}
-
-.prev-btn { left: -50px; }
-.next-btn { right: -50px; }
-
-.prev-btn:hover, .next-btn:hover {
-    background: #003300;
-}
-
-/* Fade-in Effect for Testimonials */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-
-    
 
 /* Hover Effect */
 .event-card:hover {
@@ -504,12 +456,7 @@ section.visible {
 }
 
 /* Testimonial Navigation Buttons */
-.prev-btn, .next-btn {                                                                                                    
-  
-  
-  
-  
-  
+.prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -532,8 +479,7 @@ section.visible {
 /* Fade-in Effect for Testimonials */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }                    
-    
+    to { opacity: 1; transform: translateY(0); }
 }
 /* Social Media Icons */
 .social-icons {
