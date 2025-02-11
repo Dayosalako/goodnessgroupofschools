@@ -31,6 +31,54 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", fadeInOnScroll);
     fadeInOnScroll();
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".slider");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        let index = 0;
+    
+        function moveSlide(step) {
+            const totalSlides = document.querySelectorAll(".school-card").length;
+            index = (index + step + totalSlides) % totalSlides;
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+    
+        nextBtn.addEventListener("click", () => moveSlide(1));
+        prevBtn.addEventListener("click", () => moveSlide(-1));
+    
+        // Auto-scroll every 5 seconds
+        setInterval(() => moveSlide(1), 5000);
+    });
+    
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".slider");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        
+        let currentIndex = 0;
+        const totalItems = document.querySelectorAll(".school-card").length;
+    
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    
+        nextBtn.addEventListener("click", function () {
+            if (currentIndex < totalItems - 1) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+    
+        prevBtn.addEventListener("click", function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+    });
+    
+
     // Back to Top Button
     const backToTop = document.createElement("button");
     backToTop.classList.add("back-to-top");
@@ -109,3 +157,31 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(currentSlide);
     });
 });
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll(".event-slide");
+    const slider = document.querySelector(".slider");
+
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    let newTransformValue = -currentIndex * 100 + "%";
+    slider.style.transform = "translateX(" + newTransformValue + ")";
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, 5000);
