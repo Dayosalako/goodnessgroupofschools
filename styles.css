@@ -170,6 +170,7 @@ section {
     color: #333;
 }
 
+/* events section */
 .events-section {
     text-align: center;
     padding: 50px 20px;
@@ -184,52 +185,40 @@ section {
     font-weight: bold;
 }
 
-/* Slider Container */
-.slider-container {
-    position: relative;
-    max-width: 800px;
-    margin: auto;
-    overflow: hidden;
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.event-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: left;
+.event-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: left;
 }
 
-.event-slide img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.event-details {
-    padding: 10px;
-}
-
-.event-details h3 {
+.event-card h3 {
     font-size: 20px;
     color: #2c5e1a; /* Dark Green */
     margin-bottom: 10px;
 }
 
-.event-details p {
+.event-card p {
     font-size: 16px;
     color: #333;
     line-height: 1.5;
 }
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
 
 /* Navigation Buttons */
 .prev-btn, .next-btn {
