@@ -32,6 +32,7 @@ header {
     width: 100%;
     z-index: 1000;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -126,112 +127,35 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.image-container img {
-    width: 180px; /* Reduced size */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-
-}
-
-.section-title {
-    font-size: 28px;
-    color: #2c5e1a; /* Dark Green */
-    margin-bottom: 20px;
-}
-
-.about-content {
+/* Comments Section */
+.comment-form {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
+    gap: 10px;
 }
 
-.image-container img {
-    width: 250px; /* Adjust size */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.text-container {
-    text-align: left;
-    max-width: 600px;
-}
-
-.text-container p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Ensure event/news section scrolls horizontally */
-.events-container {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
+.comment-form input,
+.comment-form textarea {
+    width: 80%;
     padding: 10px;
-    white-space: nowrap;
-}
-
-.event-card {
-    min-width: 300px;
-    flex: 0 0 auto;
-}
-
-/* Improve testimonial navigation buttons */
-.testimonials-container .prev-btn, .testimonials-container .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #004d00;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    border-radius: 50%;
-}
-
-.testimonials-container .prev-btn { left: -50px; }
-.testimonials-container .next-btn { right: -50px; }
-
-/* Fix dark mode readability */
-.dark-mode section {
-    background: #333;
-    color: white;
-}
-
-/* Mobile menu improvements */
-.menu-toggle {
-    position: fixed;
-    top: 10px;
-    left: 15px;
-    z-index: 1100;
-}
-
-/* Navigation Buttons */
-.prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
+.comment-form button {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
 
-.prev-btn:hover, .next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.comment-form button:hover {
+    background: #003300;
 }
 
 /* Footer */
