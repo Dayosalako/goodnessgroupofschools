@@ -109,3 +109,37 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(currentSlide);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const eventsContainer = document.querySelector(".events-container");
+
+    if (eventsContainer) {
+        let scrollAmount = 0;
+        const scrollStep = 2; // Speed of scrolling
+        const scrollInterval = 50; // Time between scroll steps (lower is faster)
+        let autoScroll;
+
+        function startScrolling() {
+            autoScroll = setInterval(() => {
+                if (scrollAmount < eventsContainer.scrollWidth - eventsContainer.clientWidth) {
+                    scrollAmount += scrollStep;
+                    eventsContainer.scrollLeft += scrollStep;
+                } else {
+                    scrollAmount = 0;
+                    eventsContainer.scrollLeft = 0; // Reset scroll position
+                }
+            }, scrollInterval);
+        }
+
+        function stopScrolling() {
+            clearInterval(autoScroll);
+        }
+
+        // Start auto-scroll when page loads
+        startScrolling();
+
+        // Pause scrolling when user interacts with the section
+        eventsContainer.addEventListener("mouseenter", stopScrolling);
+        eventsContainer.addEventListener("mouseleave", startScrolling);
+    }
+});
