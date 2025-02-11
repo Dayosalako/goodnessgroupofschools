@@ -273,6 +273,13 @@ section {
     border-radius: 10px;
     margin-bottom: 15px;
 }
+/* event scroll */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+
+    
 
 /* Hover Effect */
 .event-card:hover {
