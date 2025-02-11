@@ -78,48 +78,68 @@
         </div>
     </section>
 
-   <section id="events" class="events-section">
+    <!-- News and Event Section -->
+    <section id="events" class="events-section">
     <h2 class="section-title">Upcoming Events</h2>
-    
-    <div class="events-container">
-        
-        <div class="event-card">
-            <h3>🏆 Inter-House Sports Competition</h3>
-            <p><strong>Date:</strong> March 15, 2025</p>
-            <p><strong>Venue:</strong> School Sports Field</p>
-            <p><strong>Theme:</strong> "Strength, Speed, and Sportsmanship!"</p>
-            <p>Join us for a thrilling day of athletics, football, relay races, and more! Parents and staff are welcome to celebrate teamwork and sporting excellence.</p>
+
+    <div class="slider-container">
+        <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+
+        <div class="slider">
+            <div class="event-slide">
+                <img src="sports-event.jpg" alt="Inter-House Sports">
+                <div class="event-details">
+                    <h3>🏆 Inter-House Sports Competition</h3>
+                    <p><strong>Date:</strong> March 15, 2025</p>
+                    <p><strong>Venue:</strong> School Sports Field</p>
+                    <p><strong>Theme:</strong> "Strength, Speed, and Sportsmanship!"</p>
+                    <p>Join us for a thrilling day of athletics, football, relay races, and more! Parents and staff are welcome to celebrate teamwork and sporting excellence.</p>
+                </div>
+            </div>
+
+            <div class="event-slide">
+                <img src="career-day.jpg" alt="Career Day">
+                <div class="event-details">
+                    <h3>🎓 Career Day: Inspiring Future Leaders</h3>
+                    <p><strong>Date:</strong> April 10, 2025</p>
+                    <p><strong>Venue:</strong> School Auditorium</p>
+                    <p>Industry experts in Medicine, Engineering, Law, and Technology will guide students on their career paths. A must-attend event for future leaders!</p>
+                </div>
+            </div>
+
+            <div class="event-slide">
+                <img src="cultural-day.jpg" alt="Cultural Day">
+                <div class="event-details">
+                    <h3>🌍 Cultural Day Celebration</h3>
+                    <p><strong>Date:</strong> May 5, 2025</p>
+                    <p><strong>Venue:</strong> School Hall</p>
+                    <p><strong>Dress Code:</strong> Traditional Attire</p>
+                    <p>Experience Nigeria’s rich cultural heritage with traditional dances, drama, folklore, and delicious local dishes. Let’s celebrate diversity and unity!</p>
+                </div>
+            </div>
+
+            <div class="event-slide">
+                <img src="excursion.jpg" alt="Excursion">
+                <div class="event-details">
+                    <h3>🏛️ Annual School Excursion</h3>
+                    <p><strong>Date:</strong> June 20, 2025</p>
+                    <p><strong>Destination:</strong> Olumo Rock & Nike Art Gallery</p>
+                    <p>An exciting educational trip awaits! Students will explore historical landmarks, art, and nature. Limited slots available—register early!</p>
+                </div>
+            </div>
+
+            <div class="event-slide">
+                <img src="graduation.jpg" alt="Graduation Ceremony">
+                <div class="event-details">
+                    <h3>🎉 End-of-Term Prize Giving & Graduation</h3>
+                    <p><strong>Date:</strong> July 12, 2025</p>
+                    <p><strong>Venue:</strong> School Multipurpose Hall</p>
+                    <p>Celebrate academic excellence and outstanding achievements as we honor graduating students and award top performers.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="event-card">
-            <h3>🎓 Career Day: Inspiring Future Leaders</h3>
-            <p><strong>Date:</strong> April 10, 2025</p>
-            <p><strong>Venue:</strong> School Auditorium</p>
-            <p>Industry experts in Medicine, Engineering, Law, and Technology will guide students on their career paths. A must-attend event for future leaders!</p>
-        </div>
-
-        <div class="event-card">
-            <h3>🌍 Cultural Day Celebration</h3>
-            <p><strong>Date:</strong> May 5, 2025</p>
-            <p><strong>Venue:</strong> School Hall</p>
-            <p><strong>Dress Code:</strong> Traditional Attire</p>
-            <p>Experience Nigeria’s rich cultural heritage with traditional dances, drama, folklore, and delicious local dishes. Let’s celebrate diversity and unity!</p>
-        </div>
-
-        <div class="event-card">
-            <h3>🏛️ Annual School Excursion</h3>
-            <p><strong>Date:</strong> June 20, 2025</p>
-            <p><strong>Destination:</strong> Olumo Rock & Nike Art Gallery</p>
-            <p>An exciting educational trip awaits! Students will explore historical landmarks, art, and nature. Limited slots available—register early!</p>
-        </div>
-
-        <div class="event-card">
-            <h3>🎉 End-of-Term Prize Giving & Graduation</h3>
-            <p><strong>Date:</strong> July 12, 2025</p>
-            <p><strong>Venue:</strong> School Multipurpose Hall</p>
-            <p>Celebrate academic excellence and outstanding achievements as we honor graduating students and award top performers.</p>
-        </div>
-
+        <button class="next-btn" onclick="nextSlide()">&#10095;</button>
     </div>
 </section>
 
