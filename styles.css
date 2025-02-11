@@ -127,10 +127,12 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.about-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+.image-container img {
+    width: 180px; /* Reduced size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .section-title {
