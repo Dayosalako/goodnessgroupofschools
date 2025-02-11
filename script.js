@@ -89,13 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
         slides[index].style.display = "block";
     };
 
-// news and events
-  
-
-// Auto slide every 5 seconds
-setInterval(nextSlide, 5000);
-
-    
     // Show the first slide
     showSlide(currentSlide);
 
@@ -116,4 +109,3 @@ setInterval(nextSlide, 5000);
         showSlide(currentSlide);
     });
 });
-
